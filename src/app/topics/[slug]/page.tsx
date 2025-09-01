@@ -1,6 +1,7 @@
 import PostCreateForm from '@/components/posts/post-create-form';
 import PostList from '@/components/posts/post-list';
 import { fetchPostsByTopicSlug } from '@/db/queries/posts';
+import { getRandomMemberCount, getRandomOnlineCount } from '@/utils/random';
 
 interface TopicShowPageProps {
   params: Promise<{
@@ -46,11 +47,11 @@ export default async function TopicShowPage({ params }: TopicShowPageProps) {
             <div className="text-xs text-custom-muted">
               <div className="flex justify-between">
                 <span>Members</span>
-                <span className="font-medium">1.2k</span>
+                <span className="font-medium">{getRandomMemberCount()}</span>
               </div>
               <div className="flex justify-between mt-1">
                 <span>Online</span>
-                <span className="font-medium text-green-500">42</span>
+                <span className="font-medium text-green-500">{getRandomOnlineCount()}</span>
               </div>
             </div>
           </div>

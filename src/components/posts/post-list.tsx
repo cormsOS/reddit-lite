@@ -1,6 +1,7 @@
 import type { PostWithData } from "@/db/queries/posts";
 import Link from "next/link";
 import paths from "@/paths";
+import { getRandomUpvotes, getRandomTimeAgo } from "@/utils/random";
 
 interface PostListProps {
   fetchData: () => Promise<PostWithData[]>;
@@ -29,7 +30,7 @@ export default async function PostList({ fetchData }: PostListProps) {
               <button className="hover:text-reddit-orange transition-colors p-1">
                 ▲
               </button>
-              <span className="text-xs font-medium">42</span>
+              <span className="text-xs font-medium">{getRandomUpvotes()}</span>
               <button className="hover:text-reddit-blue transition-colors p-1">
                 ▼
               </button>
@@ -44,7 +45,7 @@ export default async function PostList({ fetchData }: PostListProps) {
                 <span>•</span>
                 <span>Posted by u/{post.user.name}</span>
                 <span>•</span>
-                <span>2 hours ago</span>
+                <span>{getRandomTimeAgo()}</span>
               </div>
               
               <h3 className="text-lg font-semibold text-gray-800 group-hover:text-reddit-orange transition-colors mb-2 line-clamp-2">

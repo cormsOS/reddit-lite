@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { db } from "@/db";
+import { getRandomUpvotes, getRandomTimeAgo, getRandomTrendingPercentage } from "@/utils/random";
 
 interface PostShowProps {
   postId: string;
@@ -22,7 +23,14 @@ export default async function PostShow({ postId }: PostShowProps) {
         </h1>
         <div className="flex items-center gap-2 text-custom-muted text-sm">
           <div className="w-2 h-2 bg-reddit-orange rounded-full"></div>
-          <span>Posted recently</span>
+          <span>Posted {getRandomTimeAgo()}</span>
+          <span>•</span>
+          <span>{getRandomTrendingPercentage()}% upvoted</span>
+          <span>•</span>
+          <span className="flex items-center gap-1">
+            <span>🔥</span>
+            <span>Trending</span>
+          </span>
         </div>
       </div>
       
@@ -36,7 +44,7 @@ export default async function PostShow({ postId }: PostShowProps) {
         <div className="flex items-center gap-4 text-custom-muted text-sm">
           <button className="flex items-center gap-2 hover:text-reddit-orange transition-colors">
             <span>👍</span>
-            <span>Upvote</span>
+            <span>{getRandomUpvotes()}</span>
           </button>
           <button className="flex items-center gap-2 hover:text-reddit-blue transition-colors">
             <span>💬</span>
@@ -45,6 +53,10 @@ export default async function PostShow({ postId }: PostShowProps) {
           <button className="flex items-center gap-2 hover:text-gray-600 transition-colors">
             <span>🔗</span>
             <span>Share</span>
+          </button>
+          <button className="flex items-center gap-2 hover:text-yellow-600 transition-colors">
+            <span>⭐</span>
+            <span>Save</span>
           </button>
         </div>
       </div>

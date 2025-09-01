@@ -30,7 +30,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           </div>
         </div>
       </div>
-      
+
       <div className="card-elevated p-6 rounded-xl">
         <PostList fetchData={() => fetchPostsBySearchTerm(term)} />
       </div>

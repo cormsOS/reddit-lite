@@ -3,6 +3,7 @@ import TopicCreateForm from "@/components/topics/topic-create-form";
 import TopicList from "@/components/topics/topic-list";
 import PostList from "@/components/posts/post-list";
 import { fetchTopPosts } from "@/db/queries/posts";
+import { getRandomOnlineCount, getRandomMemberCount } from "@/utils/random";
 
 export default function Home() {
   return (
@@ -33,10 +34,20 @@ export default function Home() {
         
         <div className="card-elevated p-6 rounded-xl bg-gradient-to-br from-reddit-orange/5 to-reddit-blue/5 animate-slide-in-right" style={{animationDelay: '0.2s'}}>
           <h4 className="font-semibold text-gray-800 mb-3">Welcome to Reddit Lite!</h4>
-          <p className="text-sm text-custom-muted leading-relaxed">
+          <p className="text-sm text-custom-muted leading-relaxed mb-4">
             Join communities, share content, and connect with people who share your interests. 
             Start by exploring topics or creating your first post!
           </p>
+          <div className="flex justify-between items-center text-xs text-custom-muted pt-3 border-t border-custom-border">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>{getRandomOnlineCount()} users online</span>
+            </div>
+            <div>
+              <span className="font-medium">{getRandomMemberCount()}</span>
+              <span className="ml-1">members</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
