@@ -25,7 +25,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           <div>
             <h1 className="text-2xl font-bold text-gray-800">Search Results</h1>
             <p className="text-custom-muted">
-              Found posts matching <span className="font-medium text-reddit-orange">"{term}"</span>
+              Found posts matching <span className="font-medium text-reddit-orange">&ldquo;{term}&rdquo;</span>
             </p>
           </div>
         </div>
