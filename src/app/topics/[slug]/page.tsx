@@ -36,11 +36,11 @@ export default async function TopicShowPage({ params }: TopicShowPageProps) {
           </div>
           <PostCreateForm slug={slug} />
         </div>
-        
+
         <div className="card-elevated p-6 rounded-xl bg-gradient-to-br from-reddit-blue/5 to-reddit-orange/5">
           <h4 className="font-semibold text-gray-800 mb-3">About r/{slug}</h4>
           <p className="text-sm text-custom-muted leading-relaxed">
-            Welcome to the {slug} community! Share your thoughts, ask questions, 
+            Welcome to the {slug} community! Share your thoughts, ask questions,
             and connect with others who share your interests.
           </p>
           <div className="mt-4 pt-4 border-t border-custom-border">

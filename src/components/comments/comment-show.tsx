@@ -58,9 +58,6 @@ export default async function CommentShow({
             <button className="hover:text-reddit-blue transition-colors flex items-center gap-1">
               <span>👎</span>
             </button>
-            <button className="hover:text-gray-600 transition-colors">
-              Reply
-            </button>
           </div>
 
           <CommentCreateForm postId={comment.postId} parentId={comment.id} />

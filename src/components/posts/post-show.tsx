@@ -33,13 +33,13 @@ export default async function PostShow({ postId }: PostShowProps) {
           </span>
         </div>
       </div>
-      
+
       <div className="prose max-w-none">
         <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-reddit-blue leading-relaxed text-gray-700">
           {post.content}
         </div>
       </div>
-      
+
       <div className="mt-6 pt-6 border-t border-custom-border">
         <div className="flex items-center gap-4 text-custom-muted text-sm">
           <button className="flex items-center gap-2 hover:text-reddit-orange transition-colors">

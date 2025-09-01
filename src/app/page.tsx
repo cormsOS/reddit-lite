@@ -17,13 +17,13 @@ export default function Home() {
           <PostList fetchData={fetchTopPosts} />
         </div>
       </div>
-      
+
       <div className="space-y-4">
         <div className="card-elevated p-6 rounded-xl animate-slide-in-right">
           <TopicCreateForm />
         </div>
-        
-        <div className="card-elevated p-6 rounded-xl animate-slide-in-right" style={{animationDelay: '0.1s'}}>
+
+        <div className="card-elevated p-6 rounded-xl animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-2 h-6 bg-gradient-blue rounded-full"></div>
             <h3 className="text-lg font-semibold text-gray-800">Popular Topics</h3>
@@ -31,11 +31,11 @@ export default function Home() {
           <Divider className="my-4 bg-custom-border" />
           <TopicList />
         </div>
-        
-        <div className="card-elevated p-6 rounded-xl bg-gradient-to-br from-reddit-orange/5 to-reddit-blue/5 animate-slide-in-right" style={{animationDelay: '0.2s'}}>
+
+        <div className="card-elevated p-6 rounded-xl bg-gradient-to-br from-reddit-orange/5 to-reddit-blue/5 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
           <h4 className="font-semibold text-gray-800 mb-3">Welcome to Reddit Lite!</h4>
           <p className="text-sm text-custom-muted leading-relaxed mb-4">
-            Join communities, share content, and connect with people who share your interests. 
+            Join communities, share content, and connect with people who share your interests.
             Start by exploring topics or creating your first post!
           </p>
           <div className="flex justify-between items-center text-xs text-custom-muted pt-3 border-t border-custom-border">

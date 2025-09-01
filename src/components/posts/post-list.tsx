@@ -18,10 +18,10 @@ export default async function PostList({ fetchData }: PostListProps) {
     }
 
     return (
-      <div 
-        key={post.id} 
+      <div
+        key={post.id}
         className="bg-white border border-custom-border rounded-xl p-5 hover:shadow-elevated transition-all duration-300 hover:border-reddit-orange/30 group animate-fade-in"
-        style={{animationDelay: `${index * 0.1}s`}}
+        style={{ animationDelay: `${index * 0.1}s` }}
       >
         <Link href={paths.postShow(topicSlug, post.id)} className="block">
           <div className="flex items-start gap-4">
@@ -35,7 +35,7 @@ export default async function PostList({ fetchData }: PostListProps) {
                 ▼
               </button>
             </div>
-            
+
             {/* Content section */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2 text-xs text-custom-muted">
@@ -47,11 +47,11 @@ export default async function PostList({ fetchData }: PostListProps) {
                 <span>•</span>
                 <span>{getRandomTimeAgo()}</span>
               </div>
-              
+
               <h3 className="text-lg font-semibold text-gray-800 group-hover:text-reddit-orange transition-colors mb-2 line-clamp-2">
                 {post.title}
               </h3>
-              
+
               <div className="flex items-center gap-6 text-custom-muted text-sm">
                 <div className="flex items-center gap-1">
                   <span>💬</span>

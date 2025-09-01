@@ -8,14 +8,14 @@ export default async function TopicList() {
 
   const renderedTopics = topics.map((topic, index) => {
     return (
-      <div 
-        key={topic.id} 
+      <div
+        key={topic.id}
         className="animate-fade-in"
-        style={{animationDelay: `${index * 0.1}s`}}
+        style={{ animationDelay: `${index * 0.1}s` }}
       >
         <Link href={paths.topicShow(topic.slug)}>
-          <Chip 
-            color="warning" 
+          <Chip
+            color="warning"
             variant="flat"
             className="hover:scale-105 transition-all duration-200 hover:shadow-glow-orange cursor-pointer bg-gradient-to-r from-reddit-orange/10 to-reddit-orange/20 text-reddit-orange border border-reddit-orange/20"
             size="md"

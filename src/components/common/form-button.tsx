@@ -10,17 +10,17 @@ interface FormButtonProps {
   size?: "sm" | "md" | "lg";
 }
 
-export default function FormButton({ 
-  children, 
-  isLoading, 
+export default function FormButton({
+  children,
+  isLoading,
   className = "",
   color = "primary",
   variant = "solid",
   size = "md"
 }: FormButtonProps) {
   return (
-    <Button 
-      type="submit" 
+    <Button
+      type="submit"
       isLoading={isLoading}
       className={`${className}`}
       color={color}

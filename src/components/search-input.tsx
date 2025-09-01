@@ -9,9 +9,9 @@ export default function SearchInput() {
 
   return (
     <form action={actions.search} className="w-full">
-      <Input 
-        name="term" 
-        placeholder="Search posts..." 
+      <Input
+        name="term"
+        placeholder="Search posts..."
         defaultValue={searchParams.get("term") || ""}
         classNames={{
           base: "w-full",

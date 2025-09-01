@@ -30,8 +30,8 @@ export default function TopicCreateForm() {
   return (
     <Popover placement="left" className="w-full">
       <PopoverTrigger className="w-full">
-        <Button 
-          color="primary" 
+        <Button
+          color="primary"
           className="w-full bg-gradient-orange hover:shadow-glow-orange transition-all duration-300 font-semibold"
           size="lg"
         >
@@ -48,7 +48,7 @@ export default function TopicCreateForm() {
               <div className="w-3 h-6 bg-gradient-orange rounded-full"></div>
               <h3 className="text-xl font-bold text-gray-800">Create a Topic</h3>
             </div>
-            
+
             <Input
               name="name"
               label="Topic Name"
@@ -61,7 +61,7 @@ export default function TopicCreateForm() {
                 inputWrapper: "border-custom-border hover:border-reddit-orange focus-within:border-reddit-orange"
               }}
             />
-            
+
             <Textarea
               name="description"
               label="Description"
@@ -82,7 +82,7 @@ export default function TopicCreateForm() {
               </div>
             ) : null}
 
-            <FormButton 
+            <FormButton
               isLoading={isPending}
               className="bg-gradient-orange hover:shadow-glow-orange transition-all duration-300 font-semibold"
             >

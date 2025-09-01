@@ -13,10 +13,10 @@ export default async function CommentList({ postId }: CommentListProps) {
   );
   const renderedComments = topLevelComments.map((comment, index) => {
     return (
-      <div 
+      <div
         key={comment.id}
         className="animate-fade-in"
-        style={{animationDelay: `${index * 0.1}s`}}
+        style={{ animationDelay: `${index * 0.1}s` }}
       >
         <CommentShow commentId={comment.id} postId={postId} />
       </div>
