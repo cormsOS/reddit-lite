@@ -9,7 +9,7 @@ export default function SearchInput() {
 
   return (
     <form action={actions.search}>
-      <Input name="term" defaultValue={searchParams.get("term") || ""} />
+      <Input name="term" placeholder="Search posts" defaultValue={searchParams.get("term") || ""} />
     </form>
   );
 }
