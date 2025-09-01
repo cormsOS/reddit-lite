@@ -15,9 +15,39 @@ export default async function PostShow({ postId }: PostShowProps) {
   }
 
   return (
-    <div className="m-4">
-      <h1 className="text-2xl font-bold my-2">{post.title}</h1>
-      <p className="p-4 border rounded">{post.content}</p>
+    <div className="card-elevated p-8 m-4 rounded-xl animate-slide-up">
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold text-gray-800 mb-3 leading-tight">
+          {post.title}
+        </h1>
+        <div className="flex items-center gap-2 text-custom-muted text-sm">
+          <div className="w-2 h-2 bg-reddit-orange rounded-full"></div>
+          <span>Posted recently</span>
+        </div>
+      </div>
+      
+      <div className="prose max-w-none">
+        <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-reddit-blue leading-relaxed text-gray-700">
+          {post.content}
+        </div>
+      </div>
+      
+      <div className="mt-6 pt-6 border-t border-custom-border">
+        <div className="flex items-center gap-4 text-custom-muted text-sm">
+          <button className="flex items-center gap-2 hover:text-reddit-orange transition-colors">
+            <span>👍</span>
+            <span>Upvote</span>
+          </button>
+          <button className="flex items-center gap-2 hover:text-reddit-blue transition-colors">
+            <span>💬</span>
+            <span>Comment</span>
+          </button>
+          <button className="flex items-center gap-2 hover:text-gray-600 transition-colors">
+            <span>🔗</span>
+            <span>Share</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
