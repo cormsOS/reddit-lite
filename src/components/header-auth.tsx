@@ -40,7 +40,7 @@ export default function HeaderAuth() {
                   u/{session.data.user.name}
                 </h3>
                 <p className="text-custom-muted text-sm">
-                  Redditing since {getRandomAccountAge()}
+                  Redditing for {getRandomAccountAge()}
                 </p>
               </div>
             </div>
