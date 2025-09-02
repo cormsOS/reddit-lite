@@ -36,18 +36,26 @@ export default function HeaderAuth() {
                 className="border-2 border-reddit-orange/30"
               />
               <div>
-                <h3 className="font-semibold text-gray-800">u/{session.data.user.name}</h3>
-                <p className="text-custom-muted text-sm">Reddit since {getRandomAccountAge()}</p>
+                <h3 className="font-semibold text-gray-800">
+                  u/{session.data.user.name}
+                </h3>
+                <p className="text-custom-muted text-sm">
+                  Redditing since {getRandomAccountAge()}
+                </p>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 rounded-lg">
               <div className="text-center">
-                <div className="font-semibold text-reddit-orange">{getRandomUpvotes()}</div>
+                <div className="font-semibold text-reddit-orange">
+                  {getRandomUpvotes()}
+                </div>
                 <div className="text-xs text-custom-muted">Karma</div>
               </div>
               <div className="text-center">
-                <div className="font-semibold text-reddit-blue">{Math.floor(Math.random() * 20) + 1}</div>
+                <div className="font-semibold text-reddit-blue">
+                  {Math.floor(Math.random() * 20) + 1}
+                </div>
                 <div className="text-xs text-custom-muted">Posts</div>
               </div>
             </div>
